@@ -1,0 +1,11 @@
+#hello-producer-service configuration
+server:
+  port: 8082
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+

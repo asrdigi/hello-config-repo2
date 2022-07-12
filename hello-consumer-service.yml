@@ -1,11 +1,10 @@
+#hello-consumer-service configuration
 server:
-  port: 8761
+  port: 8081
 
 eureka:
   instance:
     hostname: localhost
   client:
-    registerWithEureka: false
-    fetchRegistry: false
     serviceUrl:
       defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
