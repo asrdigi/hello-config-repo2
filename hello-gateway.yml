@@ -3,13 +3,18 @@
 server:
   port: 8085
 
-eureka:
-  instance:
-    hostname: localhost
-  client:
-    service-url:
-      default-zone: http://localhost:8761/hello-eureka-service
+#eureka:
+  #instance:
+    #hostname: localhost
+  #client:
+    #service-url:
+      #default-zone: http://localhost:8761/hello-eureka-service
 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER:http://localhost:8761/eureka}
+      
 spring:  
   cloud:
     gateway:
